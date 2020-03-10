@@ -1,0 +1,44 @@
+{
+  "name": "orienteed",
+  "private": true,
+  "description": "Orienteed gatsby theme",
+  "version": "0.1.0",
+  "author": "Xabier Lameiro <xlameiro@orienteed.com>",
+  "dependencies": {
+    "gatsby": "^2.19.24",
+    "gatsby-image": "^2.2.30",
+    "gatsby-plugin-intl": "^0.3.3",
+    "gatsby-plugin-manifest": "^2.2.25",
+    "gatsby-plugin-offline": "^3.0.17",
+    "gatsby-plugin-react-helmet": "^3.1.13",
+    "gatsby-plugin-sass": "^2.1.29",
+    "gatsby-plugin-sharp": "^2.4.5",
+    "gatsby-source-contentful": "^2.1.89",
+    "gatsby-source-filesystem": "^2.1.48",
+    "gatsby-transformer-sharp": "^2.3.16",
+    "node-sass": "^4.13.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-helmet": "^5.2.1",
+    "react-slick": "^0.25.2",
+    "slick-carousel": "^1.8.1",
+    "tsutils": "^3.17.1"
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2",
+    "typescript": "^3.8.3"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby clean && gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  }
+}

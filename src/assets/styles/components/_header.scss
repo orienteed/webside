@@ -1,0 +1,18 @@
+header {
+    font-family: $font-primary;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    section {
+        
+        &:nth-last-of-type(1) {
+            margin-right:2em;
+        }
+
+        img {
+            width: 162px;
+        }
+    }
+}

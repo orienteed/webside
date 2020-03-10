@@ -1,0 +1,12 @@
+{
+    "languages" :{
+        "en": "English",
+        "es": "Spanish"
+    },
+    "footer" : {
+        "contact" : "Contact us",
+        "phone" : "+34 981 91 48 37",
+        "email" : "administration@orienteed.com",
+        "copyright" : "All Rights Reserved."
+    }
+}
