@@ -1,14 +1,14 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from '../components/seo'
-import { injectIntl } from "gatsby-plugin-intl"
-import { graphql } from 'gatsby'
 import Slider from '../components/slider'
+import { injectIntl, Link } from "gatsby-plugin-intl"
+import { graphql } from 'gatsby'
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
 export default injectIntl(props => {
-  
+    
   const { section1, section2, section3, section4, section5 } = props.data
   
   return (
@@ -26,8 +26,8 @@ export default injectIntl(props => {
                 </div>
 
                 <div className="section__cta">
-                  <a href="!#">{section1.edges[0].node.cta[0].value}</a>
-                  <a href="!#">{section1.edges[0].node.cta[1].value}</a>
+                  <Link to={section1.edges[0].node.cta[0].href}>{section1.edges[0].node.cta[0].value}</Link>
+                  <Link to={section1.edges[0].node.cta[1].href}>{section1.edges[0].node.cta[1].value}</Link>
                 </div>
 
               </section>
@@ -61,7 +61,7 @@ export default injectIntl(props => {
                 
                   <div className="brand">
                     <div className="brand__logo">
-                      <img src={section3.edges[0].node.media[0].file.url} alt=""/>  
+                      <img src={section3.edges[0].node.media[0].file.url} alt={section3.edges[0].node.media[0].file.title}/>  
                     </div>
                     <div className="brand__text">
                       <p>{section3.edges[0].node.media[0].description}</p>
@@ -70,7 +70,7 @@ export default injectIntl(props => {
                 
                   <div className="brand">
                     <div className="brand__logo">
-                        <img src={section3.edges[0].node.media[1].file.url} alt="" />  
+                        <img src={section3.edges[0].node.media[1].file.url} alt={section3.edges[0].node.media[1].file.title} />  
                       </div>
                       <div className="brand__text">
                         <p>{section3.edges[0].node.media[1].description}</p>
@@ -79,7 +79,7 @@ export default injectIntl(props => {
                 
                   <div className="brand">
                     <div className="brand__logo">
-                        <img src={section3.edges[0].node.media[2].file.url} alt="" />  
+                        <img src={section3.edges[0].node.media[2].file.url} alt={section3.edges[0].node.media[2].file.title} />  
                       </div>
                       <div className="brand__text">
                         <p>{section3.edges[0].node.media[2].description}</p>
@@ -129,6 +129,7 @@ export default injectIntl(props => {
           }
           cta {
             value
+            href
           }
         }
       }
@@ -162,6 +163,7 @@ export default injectIntl(props => {
             file {
               url
             }
+            title
             description
           }
         }
@@ -178,6 +180,7 @@ export default injectIntl(props => {
             file {
               url
             }
+            title
             description
           }
         }
@@ -191,6 +194,7 @@ export default injectIntl(props => {
           file {
             url
           }
+          title
           description
         }
       }

@@ -1,5 +1,5 @@
 import React from 'react'
-import Slider from "react-slick";
+import Slider from "react-slick"
 
 
 export default props => {
@@ -9,7 +9,21 @@ export default props => {
         arrows: true,
         speed: 500,
         slidesToShow: 3,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [ 
+            {
+                breakpoint: 890,
+                settings: {
+                     slidesToShow : 2
+                }
+            },
+            {
+                breakpoint: 650,
+                settings: {
+                    slidesToShow : 1
+                }
+            }
+        ]
     }
 
     return (
