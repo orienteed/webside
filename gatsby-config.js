@@ -5,11 +5,6 @@ require("dotenv").config({
 })
 
 module.exports = {
-  siteMetadata: {
-    title: `Orienteed S.L`,
-    description: `Somos consultores expertos e-commerce que guiamos a las marcas hacia su transformación digital`,
-    author: `@orienteed`,
-  },
   plugins: [
     `gatsby-plugin-react-helmet`,
     {

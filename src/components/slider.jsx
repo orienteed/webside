@@ -25,12 +25,13 @@ export default props => {
             }
         ]
     }
-
+    const images = props.content.media
+    
     return (
         < >
             <Slider {...settings}>
                 {
-                    props.content.media.map(({ description, file }) =>
+                    images.map(({ description, file }) =>
                         <div key={file.url} className="slide">
                             <img src={file.url} alt=""/>
                             <span>{description}</span>

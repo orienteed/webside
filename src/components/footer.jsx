@@ -22,7 +22,6 @@ export default injectIntl(props => {
   const Links = data.allContentfulMenu.edges.filter(
   data => data.node.node_locale === props.intl.locale)[0].node.links
   
-  console.log(Links)
   return (
     < >
       <footer className="footer">
